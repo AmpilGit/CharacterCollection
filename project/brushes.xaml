@@ -9,8 +9,8 @@
     <SolidColorBrush x:Key="ControlPressedVisualBrush" Color="Transparent"/>
 
     <RadialGradientBrush x:Key="ControlBackgroundNormal" GradientOrigin="0.5,0">
-        <GradientStop Color="#FF585555" Offset="1"/>
-        <GradientStop Color="#FE8F8D8D" Offset="0.082"/>
+        <GradientStop Color="#f8173e" Offset="1"/>
+        <GradientStop Color="#FFEFA05D" Offset="0.082"/>
     </RadialGradientBrush>
 
     <LinearGradientBrush x:Key="ControlBackgroundOver" EndPoint="0,1" StartPoint="0,0">
@@ -24,8 +24,8 @@
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="ControlLightBackground" EndPoint="0,1" StartPoint="0,0">
-        <GradientStop Color="#FF878585" Offset="0"/>
-        <GradientStop Color="#FF564D35" Offset="1"/>
+        <GradientStop Color="#FFEFA05D" Offset="0"/>
+        <GradientStop Color="#FFEFA05D" Offset="1"/>
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="DisabledBrush" EndPoint="0,1" StartPoint="0,0">
@@ -34,14 +34,14 @@
         <GradientStop Color="#c2c2c2" Offset="1"/>
     </LinearGradientBrush>
 
-    <SolidColorBrush x:Key="DisabledBorderBrush" Color="#66000000" />
-    <SolidColorBrush x:Key="DisabledForeground2" Color="#FFAAAAAA"/>
-    <SolidColorBrush x:Key="ControlHighlight" Color="#80CCCCCC" />
-    <SolidColorBrush x:Key="FocusVisualBrush" Color="#B6BBBBBB" />
+    <SolidColorBrush x:Key="DisabledBorderBrush" Color="#f8173e" />
+    <SolidColorBrush x:Key="DisabledForeground2" Color="#f8173e"/>
+    <SolidColorBrush x:Key="ControlHighlight" Color="#f8173e" />
+    <SolidColorBrush x:Key="FocusVisualBrush" Color="#f8173e" />
 
     <LinearGradientBrush x:Key="ControlBorderBrush" StartPoint="0,0.5" EndPoint="1,0.5">
-        <GradientStop Color="#FF686868" Offset="0.204" />
-        <GradientStop Color="#FF686868" Offset="0.864" />
+        <GradientStop Color="#FF535353" Offset="0.204" />
+        <GradientStop Color="#FF7D7D7D" Offset="0.864" />
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="ControlActiveBorderBrush" StartPoint="0,0.5" EndPoint="1,0.5">

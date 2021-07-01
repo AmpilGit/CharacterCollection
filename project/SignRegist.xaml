@@ -5,11 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:project"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1100"
       Title="SignRegist">
 
-    <Grid Background="Black">
-        <Button Content="Sign" HorizontalAlignment="Left" Margin="306,85,0,0" VerticalAlignment="Top" Width="188" Height="88" Click="Button_Click" />
-        <Button Content="Regist" HorizontalAlignment="Left" Margin="306,261,0,0" VerticalAlignment="Top" Width="188" Height="88" Click="Button_Click_1" />
+    <Grid Margin="-18,0,0,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/wp2760744-anime-background-hd.jpg" />
+        </Grid.Background>
+        <Button Content="Sign" HorizontalAlignment="Center" Margin="460,213,406,0" VerticalAlignment="Top" Width="252" Height="137" Click="Button_Click" FontSize="48" Foreground="#FFF9F6F1" FontFamily="MV Boli" />
+        <Button Content="Register" HorizontalAlignment="Center" Margin="460,426,406,0" VerticalAlignment="Top" Width="252" Height="145" Click="Button_Click_1"  FontSize="48" Foreground="#FFF9F6F1" FontFamily="MV Boli"/>
     </Grid>
 </Page>

@@ -4,10 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:project"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Frame  Opacity="1" Name="element" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2"/>
+        mc:Ignorable="d" ResizeMode="NoResize"
+        Title="Энциклопедия персонажей" Height="800" Width="1100" Icon="Resources/collection_fill_icon_185714.png" >
+    <Grid Margin="0,-21,0,0">
+        <Frame Opacity="1" Name="element" HorizontalAlignment="Left" Height="820" VerticalAlignment="Top" Width="1120" Margin="0,24,-26,-52" />
     </Grid>
 
 </Window>

@@ -28,7 +28,9 @@ namespace project
         public void Button_Click(object sender, RoutedEventArgs e)
         {
             string name = Name.Text;
-            string password = Password.Text;
+            string password = Password.Password;
+            name = name.Trim();
+            password = password.Trim();
             if(name!="" && password != "")
             {
                 if(MainWindow.regist(name, password))

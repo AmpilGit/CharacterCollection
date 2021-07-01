@@ -1,0 +1,28 @@
+﻿<Page x:Class="project.search"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:project"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1100"
+      Title="search">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/wp2760733-anime-background-hd.jpg" />
+        </Grid.Background>
+        <Label Content="Результаты поиска" HorizontalAlignment="Left" Margin="389,0,0,0" VerticalAlignment="Top" Height="60" Width="351" FontSize="36" FontFamily="PMingLiU-ExtB" FontWeight="Bold" Foreground="Wheat"/>
+        <DataGrid FontSize="12" IsReadOnly="true" x:Name="items" HorizontalAlignment="Left" Height="279" Margin="40,55,0,0" VerticalAlignment="Top" Width="616" MouseUp="mouseup"/>
+        <Label Foreground="Coral" Content="Имя" HorizontalAlignment="Left" Margin="661,55,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36" Width="117" Height="48"/>
+        <Label Foreground="Coral" Content="От куда" HorizontalAlignment="Left" Margin="661,131,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <TextBox x:Name="Surnametext" HorizontalAlignment="Left" Height="71" Margin="817,131,0,0"  VerticalAlignment="Top" Width="232" FontSize="24"/>
+        <TextBox x:Name="Agetext" HorizontalAlignment="Left" Height="66" Margin="817,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" FontSize="24"/>
+        <TextBox x:Name="texttext" HorizontalAlignment="Left" Height="358" Margin="661,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="388" FontSize="20"/>
+        <Label Foreground="Coral" Content="Тип" HorizontalAlignment="Left" Margin="661,229,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <Label Foreground="Coral" Content="Описание" HorizontalAlignment="Left" Margin="661,293,0,0" VerticalAlignment="Top" Height="63" Width="190" FontFamily="Segoe UI Black" FontSize="36"/>
+        <Image x:Name="ImageBox" HorizontalAlignment="Left" Height="358" Margin="323,356,0,0" VerticalAlignment="Top" Width="322"/>
+        <TextBox x:Name="Nametext" HorizontalAlignment="Left" Height="59" Margin="817,55,0,0"  VerticalAlignment="Top" Width="232" FontSize="24"/>
+
+    </Grid>
+</Page>

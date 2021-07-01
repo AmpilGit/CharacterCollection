@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,13 +29,28 @@ namespace project
             InitializeComponent();
             element.Navigate(new SignRegist());
         }
+        public static void music(bool play)
+        {
+            SoundPlayer player = new SoundPlayer();
+            player.Stream = Properties.Resources.mu;
+            if (play) 
+            {
+                
+                player.Load();
+                player.PlayLooping();
+            }
+            else
+            {
+                player.Stop();
+            }
+        }
         public static bool chekingRegist(string name, string password)
         {
             bool mogno = false;
             string connectionString = "mongodb://localhost:27017";
             MongoClient client = new MongoClient(connectionString);
-            IMongoDatabase database = client.GetDatabase("test");
-            var collection = database.GetCollection<BsonDocument>("test");
+            IMongoDatabase database = client.GetDatabase("characters");
+            var collection = database.GetCollection<BsonDocument>("users");
             if (name != "" && password!="")
             {
                 var filter = new BsonDocument
@@ -62,8 +79,8 @@ namespace project
             bool mogno = false;
             string connectionString = "mongodb://localhost:27017";
             MongoClient client = new MongoClient(connectionString);
-            IMongoDatabase database = client.GetDatabase("test");
-            var collection = database.GetCollection<BsonDocument>("test");
+            IMongoDatabase database = client.GetDatabase("characters");
+            var collection = database.GetCollection<BsonDocument>("users");
             if (name != "" && password!="" && chekingRegist(name,password))
             {
                 var insert = new BsonDocument
@@ -71,6 +88,7 @@ namespace project
                 {{"name" , name},{"password",password} }
                 );
                 collection.InsertOne(insert);
+                music(false);
                 mogno = true;
             }
             return mogno;
@@ -80,8 +98,8 @@ namespace project
             bool mogno = false;
             string connectionString = "mongodb://localhost:27017";
             MongoClient client = new MongoClient(connectionString);
-            IMongoDatabase database = client.GetDatabase("test");
-            var collection = database.GetCollection<BsonDocument>("test");
+            IMongoDatabase database = client.GetDatabase("characters");
+            var collection = database.GetCollection<BsonDocument>("users");
             if (name != "" && password != "")
             {
                 var filter = new BsonDocument
@@ -95,7 +113,7 @@ namespace project
                 try
                 {
                     text[0].ToString();
-                    MessageBox.Show("WELLCUM!!!!");
+                    music(false);
                     mogno = true;
                 }
                 catch (Exception)

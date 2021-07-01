@@ -3,7 +3,7 @@
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="C:\Users\user\source\repos\project\project\brushes.xaml" />
+        <ResourceDictionary Source="brushes.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Button -->

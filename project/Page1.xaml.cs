@@ -28,7 +28,7 @@ namespace project
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string name = nameintput.Text;
-            string password = passwordinput.Text;
+            string password = passwordinput.Password;
             if(MainWindow.login(name, password))
             {
                 NavigationService.Navigate(new main());

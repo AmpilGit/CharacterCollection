@@ -5,15 +5,27 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:project"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1100"
       Title="Regist">
 
-    <Grid Background="Black">
-        <TextBox Name="Password" HorizontalAlignment="Left" Height="71" Margin="119,249,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="197"/>
-        <TextBox Name="Name" HorizontalAlignment="Left" Height="71" Margin="119,110,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="197"/>
-        <Button Content="Regist" HorizontalAlignment="Left" Margin="429,249,0,0" VerticalAlignment="Top" Width="178" Height="71" Click="Button_Click"/>
-        <TextBlock HorizontalAlignment="Left" Background="White" Margin="119,56,0,0" TextWrapping="Wrap" Text="NickName" VerticalAlignment="Top" Width="151" Height="34"/>
-        <TextBlock HorizontalAlignment="Left" Background="White" Margin="119,200,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="151" Height="34"/>
+    <Grid Margin="-21,0,0,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/wp2149974-anime-city-wallpapers.jpg" />
+        </Grid.Background>
+        <PasswordBox Name="Password" HorizontalAlignment="Left" Height="65" Margin="287,397,0,0"   VerticalAlignment="Top" Width="284" FontSize="36"/>
+        <TextBox Name="Name" HorizontalAlignment="Left" Height="81" Margin="286,251,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="285" RenderTransformOrigin="0.5,0.5" FontSize="36">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.587"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.574"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button Content="Register" HorizontalAlignment="Left" Margin="287,477,0,0" VerticalAlignment="Top" Width="284" Height="71" Click="Button_Click" FontSize="48" FontFamily="Lucida Handwriting"/>
+        <TextBlock Foreground="#f8173e" FontSize="48" FontFamily="Lucida Handwriting" HorizontalAlignment="Left"  Margin="287,190,0,0" TextWrapping="Wrap" Text="NickName" VerticalAlignment="Top" Width="284" Height="56" />
+        <TextBlock Foreground="#f8173e" FontSize="48" FontFamily="Lucida Handwriting" HorizontalAlignment="Left"  Margin="287,336,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="284" Height="61" />
 
     </Grid>
 </Page>

@@ -5,14 +5,31 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:project"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1100"
       Title="Page1">
 
-    <Grid Background="AliceBlue">
-        <TextBox Name="nameintput" HorizontalAlignment="Left" Height="51" Margin="81,107,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="221"/>
-        <TextBox  Name="passwordinput" HorizontalAlignment="Left" Height="46" Margin="81,209,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="221"/>
-        <TextBlock HorizontalAlignment="Left" Margin="81,74,0,0" TextWrapping="Wrap" Text="Nickname" VerticalAlignment="Top" Width="128"/>
-        <TextBlock HorizontalAlignment="Left" Margin="81,179,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="128"/>
-        <Button Content="Sign" HorizontalAlignment="Left" Margin="81,287,0,0" VerticalAlignment="Top" Width="146" Height="51" Click="Button_Click"/>
+    <Grid Margin="-12,0,0,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/wp2149974-anime-city-wallpapers.jpg" />
+
+        </Grid.Background>
+        <TextBox Name="nameintput" HorizontalAlignment="Left" Height="110" Margin="66,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" FontSize="36"/>
+        <PasswordBox Name="passwordinput" HorizontalAlignment="Left" Height="108" Margin="66,458,0,0"  VerticalAlignment="Top" Width="349" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="66,211,0,0" TextWrapping="Wrap" Text="Nickname" VerticalAlignment="Top" Width="349" FontFamily="Lucida Handwriting" FontSize="48" Foreground="Red"/>
+        <TextBlock HorizontalAlignment="Left" Margin="66,389,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="325" FontFamily="Lucida Handwriting" FontSize="48" Foreground="Red"/>
+        <Button Content="Sign" HorizontalAlignment="Left" Margin="489,458,0,0" VerticalAlignment="Top" Width="174" Height="108" Click="Button_Click" Foreground="#FFF1F0EF" FontSize="48" FontFamily="MV Boli">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="#FF535353" Offset="0.204"/>
+                    <GradientStop Color="#FF701212" Offset="0.864"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <RadialGradientBrush GradientOrigin="0.5,0">
+                    <GradientStop Color="#FFF8173E" Offset="1"/>
+                    <GradientStop Color="#FFE87C21" Offset="0.082"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

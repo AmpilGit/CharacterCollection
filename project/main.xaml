@@ -5,28 +5,40 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:project"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="main">
+      d:DesignHeight="800" d:DesignWidth="1100"
+      Title="main" 
+    >
 
-    <Grid Background="Red" Margin="-10,0,10,0">
-        <DataGrid HorizontalAlignment="Left" Height="225" Margin="36,10,0,0" VerticalAlignment="Top" Width="391"/>
-        <Label Content="ID" HorizontalAlignment="Left" Margin="472,37,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="idtext" HorizontalAlignment="Left" Height="23" Margin="524,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <Label Content="Title" HorizontalAlignment="Left" Margin="472,68,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="titletext" HorizontalAlignment="Left" Height="23" Margin="524,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.83"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <Label Content="Hody" HorizontalAlignment="Left" Margin="472,107,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="hodytext" HorizontalAlignment="Left" Height="167" Margin="524,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Text="чладья,чконь,чслон,чферзь,чкороль,чслон,чконь,чладья,чпешка,чпешка,чпешка,чпешка,чпешка,чпешка,чпешка,чпешка,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,бпешка,бпешка,бпешка,бпешка,бпешка,бпешка,бпешка,бпешка,бладья,бконь,бслон,бферзь,бкороль,бслон,бконь,бладья"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="472,277,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="472,298,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="472,319,0,0" VerticalAlignment="Top" Width="75"/>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources\wp2760790-anime-background-hd.jpg"/>
+        </Grid.Background>
+        <DataGrid FontSize="12" IsReadOnly="true" x:Name="items" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="664" Margin="20,10,0,0" VerticalAlignment="Top" Width="360" MouseUp="mouseup">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Picture" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Picture}" HorizontalAlignment="Left" Width="350" Height="200"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="" HorizontalAlignment="Left" Margin="472,37,0,0" VerticalAlignment="Top"/>
+        <TextBlock Opacity="0" Background="Gray" FontStyle="Italic"  x:Name="idtext" HorizontalAlignment="Left" Height="23" Margin="575,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" />
+        <Label Foreground="Coral" Content="Имя" HorizontalAlignment="Left" Margin="398,11,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36" Width="190" Height="58"/>
+        <Label Foreground="Coral" Content="От куда" HorizontalAlignment="Left" Margin="398,87,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36" Height="58" Width="245"/>
+        <TextBox x:Name="taitltext" HorizontalAlignment="Left" Height="71" Margin="652,87,0,0"  VerticalAlignment="Top" Width="377" FontSize="24"/>
+        <Button x:Name="change" Content="Add" HorizontalAlignment="Left" Margin="398,559,0,0" VerticalAlignment="Top" Width="259" Click="addcharacter" Height="56" FontFamily="Lucida Handwriting" FontSize="36"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="665,559,0,0" VerticalAlignment="Top" Width="179" Click="update" Height="56" FontFamily="Lucida Handwriting" FontSize="18"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="398,619,0,0" VerticalAlignment="Top" Width="259" Click="delete" Height="55" FontFamily="Lucida Handwriting" FontSize="36"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="850,620,0,0" VerticalAlignment="Top" Width="179" Click="search" Height="55" FontFamily="Lucida Handwriting" FontSize="36"/>
+        <TextBox x:Name="typetext" HorizontalAlignment="Left" Height="66" Margin="652,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377" FontSize="24"/>
+        <TextBox x:Name="texttext" HorizontalAlignment="Left" Height="257" Margin="398,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="631" FontSize="20"/>
+        <Label Foreground="Coral" Content="Тип" HorizontalAlignment="Left" Margin="398,177,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36" Height="58" Width="128"/>
+        <Label Foreground="Coral" Content="Описание" HorizontalAlignment="Left" Margin="398,235,0,0" VerticalAlignment="Top" Height="62" Width="245" FontFamily="Segoe UI Black" FontSize="36"/>
+        <TextBox x:Name="nametext" HorizontalAlignment="Left" Height="59" Margin="652,10,0,0"  VerticalAlignment="Top" Width="377" FontSize="24"/>
+        <Button Content="Update&#xD;&#xA;with image" HorizontalAlignment="Left" Margin="850,559,0,0" VerticalAlignment="Top" Width="179" Click="updatewithimage" Height="56" FontFamily="Lucida Handwriting" FontSize="15"/>
+        <Button Content="Clear" Click="clear" HorizontalAlignment="Left" Margin="665,620,0,0" VerticalAlignment="Top" Width="179" Height="55" FontFamily="Lucida Handwriting" FontSize="36"/>
     </Grid>
 </Page>
